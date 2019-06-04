@@ -17,14 +17,17 @@ async function task(earliest, tools) {
   alerts.forEach((alert)=>{
     const detail = alert.result._raw.detail;
     const current = moment(detail.time, 'YYYY-MM-DD HH:mm:ss.SSS');
+    if (current.isAfter(latest)) {
+      latest = current.add(1, 's');
+    }
+    if (detail.type == '入侵感知') {
+      return;
+    }
     const data = {
       time: detail.time,
       attackStage: detail.attackStage,
       type: detail.type,
     };
-    if (current.isAfter(latest)) {
-      latest = current.add(1, 's');
-    }
     const ips = alert.result.asset.split(';');
     console.log(ips);
     ips.forEach(async (ip) => {
