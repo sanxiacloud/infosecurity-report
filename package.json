@@ -1,0 +1,55 @@
+{
+  "name": "infosecurity-report",
+  "version": "1.0.0",
+  "description": "产生信息安全相关告警，展示信息安全相关数据",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanxiacloud/infosecurity-report.git"
+  },
+  "keywords": [
+    "zabbix",
+    "IS",
+    "dashboard"
+  ],
+  "author": "sanxiacloud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanxiacloud/infosecurity-report/issues"
+  },
+  "homepage": "https://github.com/sanxiacloud/infosecurity-report#readme",
+  "dependencies": {
+    "es6": "npm:@elastic/elasticsearch@^6.8.0",
+    "iconv-lite": "^0.4.24",
+    "koa": "^2.7.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "moment": "^2.24.0",
+    "ndzbx": "git+https://github.com/idlej/ndzbx.git",
+    "node-zabbix-sender": "^1.1.0",
+    "splunk": "git+https://github.com/idlej/splunk.git"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": "google",
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {}
+  }
+}
