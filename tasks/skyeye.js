@@ -50,7 +50,7 @@ async function task(earliest, tools) {
     return;
   }
   hits.push(...response.body.hits.hits);
-  while (hits.length < response.body.hits.total) {
+  while (hits.length < response.body.hits.total.value) {
     try {
       response = await tools.esClient.scroll({
         scroll_id: response.body._scroll_id,
