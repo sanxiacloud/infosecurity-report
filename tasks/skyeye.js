@@ -18,11 +18,22 @@ async function task(earliest, tools) {
               {
                 bool: {
                   should: [
+                    {term: {'skyeye.alarm_sip': '10.19.213.0/24'}},
+                    {term: {'skyeye.alarm_sip': '10.19.214.0/24'}},
+                    {term: {'skyeye.alarm_sip': '10.19.248.0/21'}},
+                    {term: {'skyeye.alarm_sip': '10.19.110.0/24'}},
+                    {term: {'skyeye.alarm_sip': '10.19.136.0/21'}},
+                    {term: {'skyeye.alarm_sip': '10.19.144.0/21'}},
+                    {term: {'skyeye.alarm_sip': '10.19.195.0/24'}},
                     {term: {'skyeye.alarm_sip': '10.27.0.0/16'}},
                     {term: {'skyeye.alarm_sip': '10.28.0.0/16'}},
                     {term: {'skyeye.alarm_sip': '10.29.0.0/16'}},
+                    {term: {'skyeye.alarm_sip': '10.30.1.0/24'}},
+                    {term: {'skyeye.alarm_sip': '10.33.0.0/16'}},
                     {term: {'skyeye.alarm_sip': '10.34.0.0/16'}},
                     {term: {'skyeye.alarm_sip': '10.35.0.0/16'}},
+                    {term: {'skyeye.alarm_sip': '172.22.224.0/24'}},
+                    {term: {'skyeye.alarm_sip': '172.22.248.0/24'}},
                   ],
                 },
               },
