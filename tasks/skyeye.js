@@ -83,6 +83,12 @@ async function task(earliest, tools) {
       if (raw.skyeye.attack_sip.ip.indexOf('10') == 0 ) {
         return;
       }
+      if (raw.skyeye.attack_sip.ip.indexOf('172.16') == 0 ) {
+        return;
+      }
+      if (raw.skyeye.attack_sip.ip.indexOf('192.168') == 0 ) {
+        return;
+      }
       if ( raw.skyeye.hazard_level <= 3) {
         return;
       }
