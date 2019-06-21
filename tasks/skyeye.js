@@ -49,6 +49,9 @@ async function task(earliest, tools) {
               {
                 term: {'skyeye.host_state': '企图'},
               },
+              {
+                term: {'skyeye.alarm_sip': '10.33.20.0/24'},
+              },
             ],
           },
         },
