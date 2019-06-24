@@ -1,6 +1,7 @@
 'use strict';
 
 const moment = require('moment');
+const { isServerIP } = require('../libs/ip-filter');
 
 let timer;
 
@@ -33,6 +34,11 @@ async function task(earliest, tools) {
     ips.forEach(async (ip) => {
       // 没有查到hostinfo时考虑使用默认host，顺便提示存在未监控主机
       console.log(ip);
+      if (!isServerIP(ip))
+      {
+        console.log(`no server ip address ${ip}`);
+        return;
+      }
       let hostinfos = [];
       try {
         hostinfos = await tools.zbxBuffer.getHostByIp(ip);
