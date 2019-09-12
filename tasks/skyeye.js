@@ -100,6 +100,7 @@ async function task(earliest, tools) {
       time: raw.skyeye.access_time,
       state: raw.skyeye.host_state,
       type: raw.skyeye.type,
+      level: raw.skyeye.hazard_level,
     };
     const ip = raw.skyeye.alarm_sip;
     let hostinfos = [];
