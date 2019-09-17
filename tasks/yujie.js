@@ -41,7 +41,7 @@ async function task(earliest, tools) {
               },
               {
                 range: {
-                  'syslog.timestamp': {
+                  '@timestamp': {
                     gt: earliest.format(),
                   },
                 },
