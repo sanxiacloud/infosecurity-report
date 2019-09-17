@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 'use strict';
 
 const moment = require('moment');
