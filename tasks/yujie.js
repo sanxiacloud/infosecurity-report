@@ -56,6 +56,18 @@ async function task(earliest, tools) {
               {
                 term: {'yujie.type': '入侵感知'},
               },
+              {
+                bool: {
+                  filter: [
+                    {
+                      term: {'yujie.attackStage': '恶意文件投递'},
+                    },
+                    {
+                      range: {'yujie.score': {lt: 60}},
+                    },
+                  ],
+                },
+              },
             ],
           },
         },
