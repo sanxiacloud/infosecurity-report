@@ -14,7 +14,7 @@ const proxy = {
   '14125': '10.34.8.1', // coredata
   '14572': '10.28.8.65', // innerapp
   '15701': '10.19.253.20', // dataexchange
-
+  '16339': '10.19.251.108', //management
 };
 
 module.exports = async function(proxyid, host, item, data) {

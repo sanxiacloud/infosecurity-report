@@ -1,0 +1,11 @@
+[Unit]
+Description=infosecurity alerts sender
+After=network-online.target
+
+[Service]
+Restart=on-failure
+ExecStart=/bin/node /opt/infosecurity-report/index.js
+
+[Install]
+WantedBy=multi-user.target
+
